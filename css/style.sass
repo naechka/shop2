@@ -1,0 +1,274 @@
+@import 'fonts'
+
+$darkTextColor: #222
+$accentColor: #f16d7f
+
+
+
+=fontProp($size, $weight, $lineHeight, $color, $family: 'Lato')
+	font-family: $family
+	font-size: $size
+	font-weight: $weight
+	line-height: $lineHeight
+	color: $color   
+
+
+
+*
+    margin: 0
+    padding: 0
+
+a
+	text-decoration: none
+
+a:visited
+    color: initial
+a:active
+    color: initial
+ul
+	list-style: none
+
+input:focus
+	outline: none
+
+button
+    &:hover
+        cursor: pointer
+
+details[open] summary
+    outline: none
+
+summary 
+    display: block
+    &:focus
+        outline: none
+    &:hover
+        cursor: pointer
+
+
+summary::-webkit-details-marker 
+  display: none
+
+
+.center
+    padding: 0 calc(50% - 570px)
+
+.logo
+    display: flex
+    align-items: center
+
+    &__icon
+        margin-right: 13px
+
+    &__text
+        +fontProp(27px, 300, 32px, $darkTextColor)
+        text-transform: uppercase
+
+        &_pink
+            +fontProp(27px, 900, 32px, $accentColor)
+
+.button
+    display: block
+    background-color: $accentColor
+    &:hover
+        background-color: $accentColor -#111
+
+.dropdown
+    position: absolute
+    z-index: 10
+    border: 1px solid #e8e8e8
+    border-radius: 2px 
+    background-color: #fff
+
+.header
+    display: flex
+    justify-content: space-between
+    height: 100px
+    border-bottom: 1px solid #ececec
+
+    &-left
+        display: flex
+
+    .search
+        display: flex
+        align-items: center
+        margin-left: 37px
+
+        &__input
+            +fontProp(14px, 300, 32px, #a4a4a4)
+            width: 280px
+            box-sizing: border-box
+            padding: 6px 15px
+            border: 1px solid #e6e6e6
+            border-left: none
+
+        &__button
+            +fontProp(14px, 300, 32px, #a4a4a4)
+            padding: 6px 11px
+            border: 1px solid #e6e6e6
+            border-left: none
+            border-top-right-radius: 2px
+            border-bottom-right-radius: 2px
+            &:focus
+                outline: none
+
+    &-right
+        display: flex
+        align-items: center 
+
+    &__button
+        display: flex
+        align-items: center
+        margin-left: 26px
+        padding: 6px 19px
+        +fontProp(15px, 400, 32px, #fff)
+        &:visited
+            color: #fff
+        &:active
+            color: #fff
+        &::after
+            content: ' '
+            width: 0
+            height: 0
+            border-left: 5px solid transparent
+            border-right: 5px solid transparent
+            border-top: 5px solid #fff
+            margin-left: 8px
+
+    &__form
+        display: flex
+        align-items: center
+
+.browse
+    position: relative
+    &[open]
+        &::after
+            content: url('../img/arrow-top.png')
+            position: absolute
+            top: 40px
+            left: 64px
+    &__summary
+        display: flex
+        align-items: center
+        padding: 6px 9px 6px 15px 
+        border: 1px solid #e6e6e6
+        border-top-left-radius: 2px
+        border-bottom-left-radius: 2px
+        background-image: linear-gradient(to top, #f9f9f9, #f5f5f5)
+        +fontProp(14px, 300, 32px, $darkTextColor)
+        &::after
+            content: ' '
+            width: 0
+            height: 0
+            border-left: 5px solid transparent
+            border-right: 5px solid transparent
+            border-top: 5px solid #838383
+            margin-left: 8px
+
+    .browse-dropdown
+        padding: 6px 12px 18px
+        width: 261px
+        border-top: none
+        box-sizing: border-box
+
+    .browse-content
+        &__heading
+            padding-left: 3px
+            border-bottom: 1px solid #e8e8e8
+            +fontProp(14px, 400, 32px, $darkTextColor)
+            text-transform: uppercase
+
+        &__category
+            padding-left: 9px
+            margin-top: 9px
+            +fontProp(14px, 400, 28px, #4f4f4f)
+
+        &__link
+            &:hover
+                color: $accentColor
+
+
+.header-cart
+    position: relative
+
+    &[open]
+        &::after
+            content: ' '
+            position: absolute
+            top: 50px
+            left: 17px
+            z-index: 20
+            border: solid #e8e8e8
+            border-width: 0 1px 1px 0
+            display: inline-block
+            padding: 3px
+            background-color: #fff
+            transform: rotate(-135deg)
+            -webkit-transform: rotate(-135deg)
+    
+        transform: none
+
+    &__icon
+        &:hover
+            path
+                fill: $accentColor
+
+    &__content
+        box-sizing: border-box
+        padding: 0 15px 15px
+        margin-top: 20px
+        width: 261px
+
+    &__card
+        display: flex
+        align-items: center
+        padding-bottom: 15px
+        padding-top: 15px
+        border-bottom: 1px solid #f2f2f2
+    
+    .cart-card
+        margin-left: 15px
+        &__name
+            display: block
+            margin-top: 10px
+            margin-bottom: 10px
+            +fontProp(12px, 700, 1, $darkTextColor)
+            text-transform: uppercase
+        &__raiting  
+            width: 55px
+            height: 13px
+            margin-bottom: 13px
+            background-image: url(../img/cart-rating.jpg)
+        &__price
+            +fontProp(12px, 400, 1, $accentColor)
+
+    &__delete
+        margin-left: 52px
+        color: #c0c0c0
+        cursor: pointer
+        &:hover
+            color: #c0c0c0 - #111
+
+    &__total
+        display: flex
+        justify-content: space-between
+        margin-top: 20px
+        margin-bottom: 32px
+        +fontProp(16px, 700, 1, $darkTextColor)
+        text-transform: uppercase
+
+    &__btn
+        display: block
+        width: 100%
+        border: 1px solid #eaeaea
+        box-sizing: border-box
+        padding-top: 18px
+        padding-bottom: 18px
+        +fontProp(14px, 700, 1, #4a4a4a)
+        text-transform: uppercase
+        text-align: center
+        &:first-of-type
+            margin-bottom: 11px
+        &:hover
+            color: $accentColor
+            border-color: $accentColor
