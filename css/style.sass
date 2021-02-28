@@ -2,6 +2,7 @@
 
 $darkTextColor: #222
 $accentColor: #f16d7f
+$elementWidth: 261px
 
 
 
@@ -30,10 +31,6 @@ ul
 
 input:focus
 	outline: none
-
-button
-    &:hover
-        cursor: pointer
 
 details[open] summary
     outline: none
@@ -70,8 +67,12 @@ summary::-webkit-details-marker
 .button
     display: block
     background-color: $accentColor
+    color: #fff
+    &:visited
+        color: #fff
     &:hover
         background-color: $accentColor -#111
+        cursor: pointer
 
 .dropdown
     position: absolute
@@ -109,6 +110,7 @@ summary::-webkit-details-marker
             border-left: none
             border-top-right-radius: 2px
             border-bottom-right-radius: 2px
+            background-color: #fff
             &:focus
                 outline: none
 
@@ -167,7 +169,7 @@ summary::-webkit-details-marker
 
     .browse-dropdown
         padding: 6px 12px 18px
-        width: 261px
+        width: $elementWidth
         border-top: none
         box-sizing: border-box
 
@@ -217,7 +219,7 @@ summary::-webkit-details-marker
         box-sizing: border-box
         padding: 0 15px 15px
         margin-top: 20px
-        width: 261px
+        width: $elementWidth
 
     &__card
         display: flex
@@ -272,3 +274,184 @@ summary::-webkit-details-marker
         &:hover
             color: $accentColor
             border-color: $accentColor
+
+.main-nav
+    &__list
+        display: flex
+        justify-content: center
+        align-items: center
+        height: 51px
+
+    &__item
+        &:not(:last-of-type)
+            margin-right: 45px
+
+    &__link
+        +fontProp(14px, 700, 26px, $darkTextColor)
+        text-transform: uppercase
+
+.brand
+    background-color: #e8e8e8
+    
+    &__wrapper
+        display: flex
+        align-items: center
+
+        height: 665px
+        background: #e8e8e8 url(../img/brand-bg.jpg) no-repeat -40px center
+        background-size: 118%
+
+    &__heading
+        width: 497px
+        border-left: 12px solid $accentColor
+        padding-left: 12px
+        +fontProp(60px, 900, normal, $darkTextColor)
+        text-transform: uppercase
+
+        &_small
+            display: block
+            font-size: 40px
+
+        &_pink
+            color: $accentColor
+
+.sale
+    display: flex
+    margin-top: 98px
+    .sale-left
+        margin-right: 20px
+
+    &__container
+        position: relative
+        background-color: #dadad2
+        &:not(:last-of-type)
+            margin-bottom: 20px
+        &_big
+            height: 542px
+        &_small
+            height: 261px
+
+    &__link
+        display: block
+        line-height: 0
+
+    &__img
+        height: 100%
+
+    &__text
+        position: absolute
+        top: 26px
+        left: 0
+        padding: 16px 20px
+        +fontProp(18px, 900, normal, $darkTextColor)
+        text-transform: uppercase 
+        background-color: #fff
+        &_big 
+            display: block
+            font-size: 30px
+            color: $accentColor
+
+.features
+    margin-top: 100px
+    &__heading
+        +fontProp(30px, 700, 54px, $darkTextColor)
+        text-transform: capitalize
+        text-align: center
+    &__text
+        +fontProp(14px, 400, 54px, #9f9f9f)
+        text-align: center
+    &__list
+        display: flex
+        flex-wrap: wrap
+        margin-top: 50px
+    &__button
+        width: 212px
+        box-sizing: border-box
+        padding: 18px 7px 18px 24px
+        margin: 0 auto
+        font-size: 16px
+        font-weight: 700
+        text-transform: capitalize
+        .fa-long-arrow-right
+            display: inline-block
+            margin-left: 9px
+
+.product-card
+    position: relative
+    width: $elementWidth
+    margin-bottom: 60px
+    &:not(:nth-of-type(4n))
+        margin-right: 32px
+    &__add-to-cart
+        display: none
+        position: absolute
+        top: 97px
+        left: 70px
+        width: 123px
+        padding: 15px 12px 15px 41px
+        border: 1px solid #fff
+        box-sizing: border-box
+        +fontProp(13px, 700, normal, #fff)
+        background: url(../img/add-to-cart.svg) no-repeat 12px center
+        cursor: pointer
+    &:hover
+        box-shadow: 0px 5px 8px 0 rgba(0, 0, 0, 0.16)
+        .product-card__link
+            filter: brightness(30%)
+        .product-card__add-to-cart
+            display: block
+    &__link
+        display: block
+        line-height: 0
+    &__img
+        height: 100%
+    &__name
+        display: block
+        margin-top: 20px
+        margin-bottom: 17px
+        padding: 0 15px
+        +fontProp(13px, 400, normal, $darkTextColor)
+        text-transform: uppercase
+    &__price
+        padding: 0 15px 20px
+        +fontProp(16px, 700, normal, $accentColor)
+    
+.advantages
+    display: flex
+    margin-top: 113px
+    &__left
+        position: relative
+    &__img
+        display: block
+    &__sale-text
+        position: absolute
+        top: 146px
+        left: 49px
+        width: 293px
+        +fontProp(53px, 700, 0.8, #fff)
+        text-transform: uppercase
+        &_pink
+            color: $accentColor
+        &_small
+            font-size: 32px
+    &__right
+        padding: 47px 36px 54px 0
+        background-color: #222
+
+.advantage-card
+    padding-left: 111px
+    &:not(:last-of-type)
+        margin-bottom: 50px
+    &__heading
+        margin-bottom: 14px
+        +fontProp(20px, 700, normal, #fff)
+        text-transform: capitalize
+    &__text
+        +fontProp(14px, 300, 24px, #fff)
+        text-align: justify
+    &_delivery
+        background:#222 url(../img/delivery-icon.svg) no-repeat 36px top
+    &_sale
+        background:#222 url(../img/sale-icon.svg) no-repeat 36px top
+    &_qa
+        background:#222 url(../img/qa-icon.svg) no-repeat 36px top

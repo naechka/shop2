@@ -51,10 +51,6 @@ input:focus {
   outline: none;
 }
 
-button:hover {
-  cursor: pointer;
-}
-
 details[open] summary {
   outline: none;
 }
@@ -112,10 +108,16 @@ summary::-webkit-details-marker {
 .button {
   display: block;
   background-color: #f16d7f;
+  color: #fff;
+}
+
+.button:visited {
+  color: #fff;
 }
 
 .button:hover {
   background-color: #e05c6e;
+  cursor: pointer;
 }
 
 .dropdown {
@@ -178,6 +180,7 @@ summary::-webkit-details-marker {
   border-left: none;
   border-top-right-radius: 2px;
   border-bottom-right-radius: 2px;
+  background-color: #fff;
 }
 
 .header .search__button:focus {
@@ -440,5 +443,327 @@ summary::-webkit-details-marker {
 .header-cart__btn:hover {
   color: #f16d7f;
   border-color: #f16d7f;
+}
+
+.main-nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 51px;
+}
+
+.main-nav__item:not(:last-of-type) {
+  margin-right: 45px;
+}
+
+.main-nav__link {
+  font-family: "Lato";
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 26px;
+  color: #222;
+  text-transform: uppercase;
+}
+
+.brand {
+  background-color: #e8e8e8;
+}
+
+.brand__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 665px;
+  background: #e8e8e8 url(../img/brand-bg.jpg) no-repeat -40px center;
+  background-size: 118%;
+}
+
+.brand__heading {
+  width: 497px;
+  border-left: 12px solid #f16d7f;
+  padding-left: 12px;
+  font-family: "Lato";
+  font-size: 60px;
+  font-weight: 900;
+  line-height: normal;
+  color: #222;
+  text-transform: uppercase;
+}
+
+.brand__heading_small {
+  display: block;
+  font-size: 40px;
+}
+
+.brand__heading_pink {
+  color: #f16d7f;
+}
+
+.sale {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 98px;
+}
+
+.sale .sale-left {
+  margin-right: 20px;
+}
+
+.sale__container {
+  position: relative;
+  background-color: #dadad2;
+}
+
+.sale__container:not(:last-of-type) {
+  margin-bottom: 20px;
+}
+
+.sale__container_big {
+  height: 542px;
+}
+
+.sale__container_small {
+  height: 261px;
+}
+
+.sale__link {
+  display: block;
+  line-height: 0;
+}
+
+.sale__img {
+  height: 100%;
+}
+
+.sale__text {
+  position: absolute;
+  top: 26px;
+  left: 0;
+  padding: 16px 20px;
+  font-family: "Lato";
+  font-size: 18px;
+  font-weight: 900;
+  line-height: normal;
+  color: #222;
+  text-transform: uppercase;
+  background-color: #fff;
+}
+
+.sale__text_big {
+  display: block;
+  font-size: 30px;
+  color: #f16d7f;
+}
+
+.features {
+  margin-top: 100px;
+}
+
+.features__heading {
+  font-family: "Lato";
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 54px;
+  color: #222;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.features__text {
+  font-family: "Lato";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 54px;
+  color: #9f9f9f;
+  text-align: center;
+}
+
+.features__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+.features__button {
+  width: 212px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 18px 7px 18px 24px;
+  margin: 0 auto;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.features__button .fa-long-arrow-right {
+  display: inline-block;
+  margin-left: 9px;
+}
+
+.product-card {
+  position: relative;
+  width: 261px;
+  margin-bottom: 60px;
+}
+
+.product-card:not(:nth-of-type(4n)) {
+  margin-right: 32px;
+}
+
+.product-card__add-to-cart {
+  display: none;
+  position: absolute;
+  top: 97px;
+  left: 70px;
+  width: 123px;
+  padding: 15px 12px 15px 41px;
+  border: 1px solid #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Lato";
+  font-size: 13px;
+  font-weight: 700;
+  line-height: normal;
+  color: #fff;
+  background: url(../img/add-to-cart.svg) no-repeat 12px center;
+  cursor: pointer;
+}
+
+.product-card:hover {
+  -webkit-box-shadow: 0px 5px 8px 0 rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 5px 8px 0 rgba(0, 0, 0, 0.16);
+}
+
+.product-card:hover .product-card__link {
+  -webkit-filter: brightness(30%);
+          filter: brightness(30%);
+}
+
+.product-card:hover .product-card__add-to-cart {
+  display: block;
+}
+
+.product-card__link {
+  display: block;
+  line-height: 0;
+}
+
+.product-card__img {
+  height: 100%;
+}
+
+.product-card__name {
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 17px;
+  padding: 0 15px;
+  font-family: "Lato";
+  font-size: 13px;
+  font-weight: 400;
+  line-height: normal;
+  color: #222;
+  text-transform: uppercase;
+}
+
+.product-card__price {
+  padding: 0 15px 20px;
+  font-family: "Lato";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: normal;
+  color: #f16d7f;
+}
+
+.advantages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 113px;
+}
+
+.advantages__left {
+  position: relative;
+}
+
+.advantages__img {
+  display: block;
+}
+
+.advantages__sale-text {
+  position: absolute;
+  top: 146px;
+  left: 49px;
+  width: 293px;
+  font-family: "Lato";
+  font-size: 53px;
+  font-weight: 700;
+  line-height: 0.8;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.advantages__sale-text_pink {
+  color: #f16d7f;
+}
+
+.advantages__sale-text_small {
+  font-size: 32px;
+}
+
+.advantages__right {
+  padding: 47px 36px 54px 0;
+  background-color: #222;
+}
+
+.advantage-card {
+  padding-left: 111px;
+}
+
+.advantage-card:not(:last-of-type) {
+  margin-bottom: 50px;
+}
+
+.advantage-card__heading {
+  margin-bottom: 14px;
+  font-family: "Lato";
+  font-size: 20px;
+  font-weight: 700;
+  line-height: normal;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.advantage-card__text {
+  font-family: "Lato";
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 24px;
+  color: #fff;
+  text-align: justify;
+}
+
+.advantage-card_delivery {
+  background: #222 url(../img/delivery-icon.svg) no-repeat 36px top;
+}
+
+.advantage-card_sale {
+  background: #222 url(../img/sale-icon.svg) no-repeat 36px top;
+}
+
+.advantage-card_qa {
+  background: #222 url(../img/qa-icon.svg) no-repeat 36px top;
 }
 /*# sourceMappingURL=style.css.map */
