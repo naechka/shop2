@@ -3,6 +3,7 @@
 $darkTextColor: #222
 $accentColor: #f16d7f
 $elementWidth: 261px
+$siteWidth: 1140px
 
 
 
@@ -48,7 +49,7 @@ summary::-webkit-details-marker
 
 
 .center
-    padding: 0 calc(50% - 570px)
+    padding: 0 calc(50% - #{$siteWidth/2})
 
 .logo
     display: flex
@@ -419,6 +420,7 @@ summary::-webkit-details-marker
 .advantages
     display: flex
     margin-top: 113px
+    margin-bottom: 97px
     &__left
         position: relative
     &__img
@@ -455,3 +457,130 @@ summary::-webkit-details-marker
         background:#222 url(../img/sale-icon.svg) no-repeat 36px top
     &_qa
         background:#222 url(../img/qa-icon.svg) no-repeat 36px top
+
+.subscribe
+    display: flex
+    height: 438px
+    margin-bottom: 109px
+    background: #f2f2f2 url(../img/subscribe-bg.png) no-repeat center 18px
+    background-size: cover
+    &__left
+        width: 50%
+        border-right: 1px solid #e3e3e3
+    &__right
+        width: 50%
+
+.review
+    &__img
+        object-fit: contain
+        object-position: top
+    &__container
+        display: flex
+        padding-top: 111px
+    &__content
+        width: 386px
+        margin-left: 28px
+        margin-top: 5px
+    &__text
+        margin-bottom: 10px
+        +fontProp(16px, 400, 26px, $darkTextColor)
+        font-style: italic
+    &__name
+        +fontProp(16px, 700, 26px, $accentColor)
+        &_pink
+            display: block
+            +fontProp(12px, 300, 14px, $darkTextColor)
+        
+.subscribe-form
+    display: flex
+    flex-direction: column
+    justify-content: center
+    &__heading
+        +fontProp(24px, 400, 37px, $darkTextColor)
+        text-transform: uppercase
+        text-align: center
+    &__content
+        +fontProp(14px, 400, 24px, $darkTextColor)
+        text-transform: uppercase
+        text-align: center
+    &__form
+        margin: 0 auto
+        margin-top: 30px
+    &__input
+        width: 282px
+        padding: 13px 28px
+        box-sizing: border-box
+        border-color: transparent
+        border-top-left-radius: 21px
+        border-bottom-left-radius: 21px
+        background-color: #e1e1e1
+        +fontProp(14px, 400, 1, $darkTextColor)
+        opacity: 0.67
+        text-transform: capitalize
+    &__button
+        width: 104px
+        padding: 13px 20px
+        box-sizing: border-box
+        margin-left: -5px
+        border-color: transparent
+        background-color: $accentColor
+        border-top-right-radius: 21px
+        border-bottom-right-radius: 21px
+        color: #fff
+        &:hover
+            cursor: pointer
+            background-color: $accentColor - #111
+
+.footer-nav
+    display: flex
+    &__info
+        width: 427px
+    &__text
+        +fontProp(14px, 300, 24px, #898989)
+        &:first-of-type
+            margin-top: 20px
+            margin-bottom: 24px
+    &__nav
+        display: flex
+        margin-left: 64px
+        padding-top: 5px
+        padding-bottom: 89px
+    &__list
+        width: calc(#{($siteWidth - 427px - 64px)/3})
+    &__item
+        &:not(:last-of-type)
+            margin-bottom: 22px
+    &__link
+        +fontProp(16px, 400, 1, #898989)
+    &__header
+        margin-bottom: 46px
+        +fontProp(18px, 700, 26px, $accentColor)
+        text-transform: uppercase
+
+.copyright
+    display: flex
+    justify-content: space-between
+    padding-top: 24px
+    padding-bottom: 24px
+    background: #e6e6e6
+    &__text
+        +fontProp(16px, 400, 32px, #7a7a7a)
+
+.social
+    display: flex
+    align-items: center
+    &__item
+        &:not(:last-of-type)
+            margin-right: 8px
+    &__link
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 32px
+        height: 32px
+        background-color: #fff
+        font-size: 16px
+    &__icon
+        color: #b2b2b2
+
+            
