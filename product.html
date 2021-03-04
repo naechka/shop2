@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="header center">
+        <div class="header-left">
+            <div class="logo header__logo">
+                <a href="index.html"><img src="img/logo.png" alt="logo" class="logo__icon"></a>
+                <div class="logo__text"><a class="logo__link" href="index.html">Bran<span
+                            class="logo__text_pink">d</span></a></div>
+            </div>
+            <div class="search">
+                <details class="browse">
+                    <summary class="browse__summary">Browse</summary>
+                    <div class="browse-dropdown dropdown">
+                        <details class="browse-content">
+                            <summary class="browse-content__heading">Women</summary>
+                            <ul class="browse-content__category">
+                                <li class="browse-content__list"><a class="browse-content__link" href="#">Dresses</a>
+                                </li>
+                                <li class="browse-content__list"><a class="browse-content__link" href="#">Tops</a></li>
+                                <li class="browse-content__list"><a class="browse-content__link"
+                                        href="#">Sweaters/Knits</a>
+                                </li>
+                                <li class="browse-content__list"><a class="browse-content__link"
+                                        href="#">Jackets/Coats</a>
+                                </li>
+                                <li class="browse-content__list"><a class="browse-content__link" href="#">Blazers</a>
+                                </li>
+                                <li class="browse-content__list"><a class="browse-content__link" href="#">Denim</a></li>
+                                <li class="browse-content__list"><a class="browse-content__link"
+                                        href="#">Leggings/Pants</a>
+                                </li>
+                                <li class="browse-content__list"><a class="browse-content__link"
+                                        href="#">Skirts/Shirts</a>
+                                </li>
+                                <li class="browse-content__list"><a class="browse-content__link"
+                                        href="#">Accessories</a>
+                                </li>
+                            </ul>
+                        </details>
+                        <details class="browse-content">
+                            <summary class="browse-content__heading">Men</summary>
+                            <ul class="browse-content__category">
+                                <li class="browse-content__list"><a class="browse-content__link" href="#">Tees/Tank
+                                        Tops</a></li>
+                                <li class="browse-content__list"><a class="browse-content__link"
+                                        href="#">Shirts/Polos</a>
+                                </li>
+                                <li class="browse-content__list"><a class="browse-content__link" href="#">Sweaters</a>
+                                </li>
+                                <li class="browse-content__list"><a class="browse-content__link"
+                                        href="#">Sweatshirts/Hoodies</a></li>
+                                <li class="browse-content__list"><a class="browse-content__link" href="#">Blazers</a>
+                                </li>
+                                <li class="browse-content__list"><a class="browse-content__link"
+                                        href="#">Jackets/Vests</a>
+                                </li>
+                            </ul>
+                        </details>
+                    </div>
+                </details>
+                <form action="search" class="search__form">
+                    <input class="search__input" type="search" name="search" placeholder="Search for Item..."><button
+                        class="search__button"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="header-right">
+            <details class="header-cart">
+                <summary><svg class="header-cart__icon" xmlns="http://www.w3.org/2000/svg" width="32" height="29">
+                        <path fill="#222" fill-rule="evenodd"
+                            d="M31.899 7.565l-5.406 12.412c-.197.433-.611.709-1.084.709H10.554c-.533 0-1.006-.355-1.144-.867L4.577 2.364H1.184C.533 2.364 0 1.832 0 1.182 0 .532.533 0 1.184 0h4.28c.533 0 1.007.354 1.145.867l4.833 17.455H24.62l4.379-10.048H14.401c-.651 0-1.184-.532-1.184-1.182 0-.65.533-1.182 1.184-1.182h16.413c.394 0 .769.197.986.532.217.335.257.749.099 1.123zM9.429 23.641c1.48 0 2.683 1.202 2.683 2.679 0 1.478-1.203 2.68-2.683 2.68-1.479 0-2.682-1.202-2.682-2.68 0-1.477 1.203-2.679 2.682-2.679zm16.591 0c1.48-.098 2.762 1.025 2.861 2.483.039.728-.178 1.418-.651 1.95-.474.552-1.125.867-1.835.926h-.197c-1.401 0-2.565-1.103-2.663-2.502-.099-1.458 1.006-2.758 2.485-2.857z" />
+                    </svg></summary>
+                <div class="header-cart__content dropdown">
+                    <div class="header-cart__card">
+                        <a href=#><img src="img/cart-card1.jpg" alt="card"></a>
+                        <div class="cart-card">
+                            <a href="#" class="cart-card__name">Rebox Zane</a>
+                            <div class="cart-card__raiting"></div>
+                            <p class="cart-card__price">1 X $250</p>
+                        </div>
+                        <div class="header-cart__delete"><i class="fa fa-times-circle"></i></div>
+                    </div>
+                    <div class="header-cart__card">
+                        <a href="#"><img src="img/cart-card2.jpg" alt="card"></a>
+                        <div class="cart-card">
+                            <a href="#" class="cart-card__name">Rebox Zane</a href="#">
+                            <div class="cart-card__raiting"></div>
+                            <p class="cart-card__price">1 X $250</p>
+                        </div>
+                        <div class="header-cart__delete"><i class="fa fa-times-circle"></i></div>
+                    </div>
+                    <div class="header-cart__total">
+                        <span>Total</span> <span>$500</span>
+                    </div>
+                    <a href="" class="header-cart__btn">Checkout</a>
+                    <a href="" class="header-cart__btn">Go to card</a>
+                </div>
+            </details>
+            <a href="#" class="button header__button">My account</a>
+        </div>
+    </header>
+
+    <nav class="main-nav center">
+        <ul class="main-nav__list">
+            <li class="main-nav__item"><a href="#" class="main-nav__link">Home</a></li>
+            <li class="main-nav__item"><a href="#" class="main-nav__link">Man</a></li>
+            <li class="main-nav__item"><a href="#" class="main-nav__link">Women</a></li>
+            <li class="main-nav__item"><a href="#" class="main-nav__link">Kids</a></li>
+            <li class="main-nav__item"><a href="#" class="main-nav__link">Accessories</a></li>
+            <li class="main-nav__item"><a href="#" class="main-nav__link">Featured</a></li>
+            <li class="main-nav__item"><a href="#" class="main-nav__link">Hot deals</a></li>
+        </ul>
+        <div class="nav-menu dropdown">
+            <ul class="nav-menu__list">
+                <li class="nav-menu__heading">Women</li>
+                <li class="nav-menu__item"><a href="" class="nav-menu__link">Dresses</a></li>
+                <li class="nav-menu__item"><a href="" class="nav-menu__link">Tops</a></li>
+                <li class="nav-menu__item"><a href="" class="nav-menu__link">Sweaters/Knits</a></li>
+                <li class="nav-menu__item"><a href="" class="nav-menu__link">Jackets/Coats</a></li>
+                <li class="nav-menu__item"><a href="" class="nav-menu__link">Blazers</a></li>
+                <li class="nav-menu__item"><a href="" class="nav-menu__link">Denim</a></li>
+                <li class="nav-menu__item"><a href="" class="nav-menu__link">Leggings/Pants</a></li>
+                <li class="nav-menu__item"><a href="" class="nav-menu__link">Skirts/Shorts</a></li>
+                <li class="nav-menu__item"><a href="" class="nav-menu__link">Accessories</a></li>
+            </ul>
+            <ul class="nav-menu__list">
+                <li class="nav-menu__heading">Women</li>
+                <li class="nav-menu__item"><a href="" class="nav-menu__link">Dresses</a></li>
+                <li class="nav-menu__item"><a href="" class="nav-menu__link">Tops</a></li>
+                <li class="nav-menu__item"><a href="" class="nav-menu__link">Sweaters/Knits</a></li>
+                <li class="nav-menu__item"><a href="" class="nav-menu__link">Jackets/Coats</a></li>
+            </ul>
+            <ul class="nav-menu__list">
+                <li class="nav-menu__heading">Women</li>
+                <li class="nav-menu__item"><a href="" class="nav-menu__link">Dresses</a></li>
+                <li class="nav-menu__item"><a href="" class="nav-menu__link">Tops</a></li>
+                <li class="nav-menu__item"><a href="" class="nav-menu__link">Sweaters/Knits</a></li>
+            </ul>
+            <ul class="nav-menu__list">
+                <li class="nav-menu__heading">Women</li>
+                <li class="nav-menu__item"><a href="" class="nav-menu__link">Dresses</a></li>
+                <li class="nav-menu__item"><a href="" class="nav-menu__link">Tops</a></li>
+                <li class="nav-menu__item"><a href="" class="nav-menu__link">Sweaters/Knits</a></li>
+                <li class="nav-menu__item"><a href="" class="nav-menu__link">Jackets/Coats</a></li>
+            </ul>
+            <div class="nav-menu__promo">
+                <a class="nav-menu__promo-link" href="#"><img src="img/nav-promo.jpg" alt="super sale!"
+                        class="nav-menu__img">
+                    <p class="nav-menu__promo-text">super sale!</p>
+                </a>
+
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="heading-section center">
+            <h1 class="heading-section__title">New arrivals</h1>
+            <ul class="breadcrumbs">
+                <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Home</a></li>
+                <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Men</a></li>
+                <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link breadcrumbs__link_active">New
+                        arrivals</a></li>
+            </ul>
+        </section>
+
+        <section class="product-photo">
+            <div class="arrow-wrapper product-photo__arrow-wrapper-left">
+                <i class="arrow product-photo__arrow fa fa-angle-left"></i>
+            </div>
+            <img src="img/product-photo.jpg" alt="moschino">
+            <div class="arrow-wrapper product-photo__arrow-wrapper-right">
+                <i class="arrow product-photo__arrow fa fa-angle-right"></i>
+            </div>
+        </section>
+
+        <section class="product-info center">
+            <div class="product-info__main">
+                <div class="category-name">WOMEN COLLECTION</div>
+                <h2 class="product-info__heading">MOSCHINO CHEAP AND CHIC</h2>
+                <p class="product-info__product-descrition">Compellingly actualize fully researched processes before
+                    proactive outsourcing. Progressively syndicate collaborative
+                    architectures before cutting-edge services. Completely visualize parallel core competencies rather
+                    than
+                    exceptional
+                    portals.</p>
+                <div class="product-info__characteristic product-characteristic">
+                    <p class="product-characteristic__name">Material: <span
+                            class="product-characteristic__value">cotton</span></p>
+                    <p class="product-characteristic__name">Designer: <span class="product-characteristic__value">
+                            BINBURHAN</span></p>
+                </div>
+
+                <div class="product-info__price">$561</div>
+            </div>
+            <div class="product-info__filter">
+                <div class="filter filter_select">
+                    <p class="filter__heading">CHOOSE COLOR</p>
+                    <select class="filter__field" name="color" id="">
+                        <option class="filter__option filter__option_red" value="red">Red</option>
+                        <option class="filter__option filter__option_black" value="black">Black</option>
+                        <option class="filter__option filter__option_green" value="green">Green</option>
+                        <option class="filter__option filter__option_yellow" value="yellow">Yellow</option>
+                    </select>
+                </div>
+                <div class="filter filter_select">
+                    <p class="filter__heading">CHOOSE SIZE</p>
+                    <select class="filter__field" name="size" id="">
+                        <option class="filter__option" value="xxl">XXL</option>
+                        <option class="filter__option" value="xl">XL</option>
+                        <option class="filter__option" value="l">L</option>
+                        <option class="filter__option" value="m">M</option>
+                    </select>
+                </div>
+                <div class="filter filter_number">
+                    <p class="filter__heading">QUANTITY</p>
+                    <input class="filter__field" type="number" name="quantity" id="">
+                </div>
+            </div>
+            <div class="btn product-info__btn">
+                <svg class="product-info__btn-icon" width="26" height="24" viewBox="0 0 26 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M21.876 22.2662C21.921 22.2549 21.9423 22.2339 21.96 22.2129C21.9678 22.2037 21.9756 22.1946 21.9835 22.1855C22.02 22.1438 22.0233 22.0553 22.0224 22.0105C22.0092 21.9044 21.9185 21.8315 21.8412 21.8315C21.8375 21.8315 21.8336 21.8317 21.8312 21.8318C21.7531 21.8372 21.6653 21.9409 21.6719 22.0625C21.6813 22.1793 21.7675 22.2662 21.8392 22.2662H21.876ZM8.21954 22.2599C8.31873 22.2599 8.39935 22.1655 8.39935 22.0496C8.39935 21.9341 8.31873 21.8401 8.21954 21.8401C8.12042 21.8401 8.03973 21.9341 8.03973 22.0496C8.03973 22.1655 8.12042 22.2599 8.21954 22.2599ZM21.9995 24.2662C21.9517 24.2662 21.8878 24.2662 21.8392 24.2662C20.7017 24.2662 19.7567 23.3545 19.6765 22.198C19.5964 20.9929 20.4937 19.9183 21.6953 19.8364C21.7441 19.8331 21.7928 19.8315 21.8412 19.8315C22.9799 19.8315 23.9413 20.7324 24.019 21.8884C24.0505 22.4915 23.8741 23.0612 23.4898 23.5012C23.1055 23.9575 22.5764 24.2177 21.9995 24.2662ZM8.21954 24.2599C7.01532 24.2599 6.03973 23.2709 6.03973 22.0496C6.03973 20.8291 7.01532 19.8401 8.21954 19.8401C9.42371 19.8401 10.3994 20.8291 10.3994 22.0496C10.3994 23.2709 9.42371 24.2599 8.21954 24.2599ZM21.1984 17.3938H9.13306C8.70013 17.3938 8.31586 17.1005 8.20331 16.6775L4.27753 2.24768H1.52173C0.993408 2.24768 0.560547 1.80859 0.560547 1.27039C0.560547 0.733032 0.993408 0.292969 1.52173 0.292969H4.99933C5.43134 0.292969 5.81561 0.586304 5.9281 1.01025L9.85394 15.4391H20.5576L24.1144 7.13379H12.2578C11.7286 7.13379 11.2957 6.69373 11.2957 6.15649C11.2957 5.61914 11.7286 5.17908 12.2578 5.17908H25.5886C25.9091 5.17908 26.2141 5.34192 26.3896 5.61914C26.566 5.89539 26.5984 6.23743 26.4697 6.547L22.0795 16.807C21.9193 17.1653 21.5827 17.3938 21.1984 17.3938Z" />
+                </svg>
+                Add to Cart
+            </div>
+        </section>
+
+        <section class="like-also center">
+            <h2 class="like-also__title">You may like also</h2>
+            <ul class="features__list">
+                <li class="features__item product-card">
+                    <a href="#" class="product-card__link"><img src="img/like-also1.jpg" alt="Mango  People  T-shirt"
+                            class="product-card__img"></a>
+                    <a href="#" class="product-card__name">BLAZE LEGGINGS</a>
+                    <div class="product-card__price">$52.00</div>
+                    <div class="product-card__add-to-cart">Add to Cart</div>
+                </li>
+                <li class="features__item product-card">
+                    <a href="#" class="product-card__link"><img src="img/like-also2.jpg" alt="Mango  People  T-shirt" class="product-card__img"></a>
+                    <a href="#" class="product-card__name">ALEXA SWEATER</a>
+                    <div class="product-card__price">$52.00</div>
+                    <div class="product-card__add-to-cart">Add to Cart</div>
+                </li>
+                <li class="features__item product-card">
+                    <a href="#" class="product-card__link"><img src="img/like-also3.jpg" alt="Mango  People  T-shirt"
+                            class="product-card__img"></a>
+                    <a href="#" class="product-card__name">AGNES TOP</a>
+                    <div class="product-card__price">$52.00</div>
+                    <div class="product-card__add-to-cart">Add to Cart</div>
+                </li>
+                <li class="features__item product-card">
+                    <a href="#" class="product-card__link"><img src="img/like-also4.jpg" alt="Mango  People  T-shirt"
+                            class="product-card__img"></a>
+                    <a href="#" class="product-card__name"> SYLVA SWEATER</a>
+                    <div class="product-card__price">$52.00</div>
+                    <div class="product-card__add-to-cart">Add to Cart</div>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <section class="subscribe center">
+            <div class="subscribe__left review">
+                <div class="review__container">
+                    <img class="review__img" src="img/review-avatar.png" alt="avatar" class="review__avatar">
+                    <div class="review__content">
+                        <p class="review__text">
+                            “Vestibulum quis porttitor dui! Quisque viverra nunc mi,
+                            a pulvinar purus condimentum a. Aliquam condimentum mattis neque sed pretium”
+                        </p>
+                        <p class="review__name">Bin Burhan<span class="review__name_pink">
+                                Dhaka, Bd</span></p>
+                    </div>
+                </div>
+                <ul class="review-switcher">
+                    <li class="review-switcher__slide"><span></span></li>
+                    <li class="review-switcher__slide"><span class="active-slide"></span></li>
+                    <li class="review-switcher__slide"><span></span></li>
+                </ul>
+            </div>
+            <div class="subscribe__right subscribe-form">
+                <h3 class="subscribe-form__heading">Subscribe</h3>
+                <p class="subscribe-form__content">FOR OUR NEWLETTER AND PROMOTION</p>
+                <form action="subscribe" class="subscribe-form__form">
+                    <input class="subscribe-form__input" type="email" placeholder="Enter your email">
+                    <input class="subscribe-form__button" type="button" value="Subscribe">
+                </form>
+            </div>
+        </section>
+        <section class="footer-nav center">
+            <div class="footer-nav__info">
+                <div class="logo">
+                    <a href="index.html"><img src="img/logo.png" alt="logo" class="logo__icon"></a>
+                    <div class="logo__text"><a class="logo__link" href="index.html">Bran<span
+                                class="logo__text_pink">d</span></a></div>
+                </div>
+                <p class="footer-nav__text">Objectively transition extensive data rather than cross functional
+                    solutions.
+                    Monotonectally syndicate multidisciplinary
+                    materials before go forward benefits. Intrinsicly syndicate an expanded array of processes and
+                    cross-unit partnerships.</p>
+                <p class="footer-nav__text">Efficiently plagiarize 24/365 action items and focused infomediaries.
+                    Distinctively seize superior initiatives for wireless technologies. Dynamically optimize.</p>
+            </div>
+            <nav class="footer-nav__nav">
+                <ul class="footer-nav__list">
+                    <li class="footer-nav__item">
+                        <h3 class="footer-nav__header">Company</h3>
+                    </li>
+                    <li class="footer-nav__item"><a href="" class="footer-nav__link">Home</a></li>
+                    <li class="footer-nav__item"><a href="" class="footer-nav__link">Shop</a></li>
+                    <li class="footer-nav__item"><a href="" class="footer-nav__link">About</a></li>
+                    <li class="footer-nav__item"><a href="" class="footer-nav__link">How It Works</a></li>
+                    <li class="footer-nav__item"><a href="" class="footer-nav__link">Contact</a></li>
+                </ul>
+                <ul class="footer-nav__list">
+                    <li class="footer-nav__item">
+                        <h3 class="footer-nav__header">Information</h3>
+                    </li>
+                    <li class="footer-nav__item"><a href="" class="footer-nav__link">Tearms & Condition</a></li>
+                    <li class="footer-nav__item"><a href="" class="footer-nav__link">Privacy Policy</a></li>
+                    <li class="footer-nav__item"><a href="" class="footer-nav__link">How to Buy</a></li>
+                    <li class="footer-nav__item"><a href="" class="footer-nav__link">How to Sell</a></li>
+                    <li class="footer-nav__item"><a href="" class="footer-nav__link">Promotion</a></li>
+                </ul>
+                <ul class="footer-nav__list">
+                    <li class="footer-nav__item">
+                        <h3 class="footer-nav__header">Shop category</h3>
+                    </li>
+                    <li class="footer-nav__item"><a href="" class="footer-nav__link">Men</a></li>
+                    <li class="footer-nav__item"><a href="" class="footer-nav__link">Women</a></li>
+                    <li class="footer-nav__item"><a href="" class="footer-nav__link">Child</a></li>
+                    <li class="footer-nav__item"><a href="" class="footer-nav__link">Apparel</a></li>
+                    <li class="footer-nav__item"><a href="" class="footer-nav__link">Brows All</a></li>
+                </ul>
+            </nav>
+        </section>
+        <section class="copyright center">
+            <p class="copyright__text">© 2017 Brand All Rights Reserved.</p>
+            <ul class="copyright__social social">
+                <li class="social__item"><a href="#" class="social__link"><span class="social__icon fa fa-facebook"
+                            aria-hidden="true"></span></a></li>
+                <li class="social__item"><a href="#" class="social__link"><span class="social__icon fa fa-twitter"
+                            aria-hidden="true"></span></a></li>
+                <li class="social__item"><a href="#" class="social__link"><span class="social__icon fa fa-linkedin"
+                            aria-hidden="true"></span></a></li>
+                <li class="social__item"><a href="#" class="social__link"><span class="social__icon fa fa-pinterest-p"
+                            aria-hidden="true"></span></a></li>
+                <li class="social__item"><a href="#" class="social__link"><span class="social__icon fa fa-google-plus"
+                            aria-hidden="true"></span></a></li>
+            </ul>
+        </section>
+    </footer>
+</body>
+
+</html>
