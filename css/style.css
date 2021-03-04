@@ -58,7 +58,7 @@ ul {
   list-style: none;
 }
 
-input:focus {
+input:focus, select:focus {
   outline: none;
 }
 
@@ -320,6 +320,10 @@ summary::-webkit-details-marker {
   color: #4f4f4f;
 }
 
+.browse .browse-content__link {
+  color: #4f4f4f;
+}
+
 .browse .browse-content__link:hover {
   color: #f16d7f;
 }
@@ -514,6 +518,7 @@ summary::-webkit-details-marker {
 }
 
 .nav-menu__link {
+  display: block;
   font-family: "Lato";
   font-size: 14px;
   font-weight: 400;
@@ -521,8 +526,17 @@ summary::-webkit-details-marker {
   color: #646464;
 }
 
+.nav-menu__link:hover {
+  color: #f16d7f;
+}
+
 .nav-menu__promo {
   position: relative;
+}
+
+.nav-menu__promo-link {
+  display: block;
+  line-height: 0;
 }
 
 .nav-menu__img {
@@ -1133,5 +1147,332 @@ summary::-webkit-details-marker {
 
 .social__icon {
   color: #b2b2b2;
+}
+
+.heading-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 148px;
+  background-color: #f8f3f4;
+}
+
+.heading-section__title {
+  font-family: "Lato";
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #f16d7f;
+  text-transform: uppercase;
+}
+
+.breadcrumbs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.breadcrumbs__item:not(:last-of-type)::after {
+  content: '/';
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.breadcrumbs__link {
+  font-family: "Lato";
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 20px;
+  color: #636363;
+  text-transform: uppercase;
+}
+
+.breadcrumbs__link_active {
+  font-weight: 700;
+  color: #f16d7f;
+}
+
+.breadcrumbs__link_active:visited {
+  color: #f16d7f;
+}
+
+.product-photo {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #F7F7F7;
+  padding-bottom: 64px;
+}
+
+.product-photo__arrow-wrapper-right {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.product-photo__arrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 47px;
+  height: 47px;
+  background-color: rgba(42, 42, 42, 0.15);
+}
+
+.arrow-wrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.arrow {
+  font-size: 22px;
+  color: #fff;
+}
+
+.arrow:hover {
+  cursor: pointer;
+  color: #f16d7f;
+}
+
+.product-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 640px;
+  border: 1px solid #EAEAEA;
+  padding: 64px 250px;
+  margin: 0 auto;
+  margin-top: -64px;
+  margin-bottom: 119px;
+  background-color: #fff;
+  position: relative;
+  text-align: center;
+}
+
+.product-info__main {
+  margin-bottom: 65px;
+  border-bottom: 1px solid #EAEAEA;
+}
+
+.product-info__heading {
+  margin-top: 12px;
+  margin-bottom: 58px;
+  font-family: "Lato";
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 24px;
+  color: #4D4D4D;
+  text-transform: uppercase;
+}
+
+.product-info__product-descrition {
+  margin-bottom: 32px;
+  font-family: "Lato";
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 24px;
+  color: #5E5E5E;
+}
+
+.product-info__price {
+  margin-bottom: 65px;
+  font-family: "Lato";
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #f16d7f;
+  text-transform: uppercase;
+}
+
+.product-info__filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 537px;
+}
+
+.product-info__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 537px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 19px 20px;
+  margin-top: 49px;
+  border: 1px solid #f16d7f;
+  font-family: "Lato";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: normal;
+  color: #f16d7f;
+}
+
+.product-info__btn:hover {
+  cursor: pointer;
+}
+
+.product-info__btn-icon {
+  margin-right: 15px;
+}
+
+.product-info__btn-icon path {
+  fill: #f16d7f;
+}
+
+.category-name {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #eaeaea;
+  font-family: "Lato";
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #f16d7f;
+  text-transform: uppercase;
+}
+
+.category-name::after {
+  content: "";
+  position: absolute;
+  left: 42px;
+  top: 35px;
+  display: block;
+  width: 63px;
+  height: 3px;
+  background-color: #ef5b70;
+}
+
+.product-characteristic {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: 31px;
+  margin-bottom: 35px;
+}
+
+.product-characteristic__name {
+  font-family: "Lato";
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #b9b9b9;
+  text-transform: uppercase;
+}
+
+.product-characteristic__name:last-of-type {
+  margin-left: 44px;
+}
+
+.product-characteristic__value {
+  color: #2f2f2f;
+}
+
+.filter {
+  position: relative;
+}
+
+.filter__heading {
+  font-family: "Lato";
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #2f2f2f;
+  text-transform: uppercase;
+  margin-bottom: 9px;
+  text-align: left;
+}
+
+.filter_select::after {
+  content: "";
+  display: block;
+  border: solid #bcbcbc;
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  padding: 3px;
+  background-color: #fff;
+  pointer-events: none;
+  position: absolute;
+  top: 51px;
+  left: 119px;
+  z-index: 1;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.filter_select .filter__field:hover {
+  cursor: pointer;
+}
+
+.filter__field {
+  position: relative;
+  font-family: "Lato";
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #bcbcbc;
+  width: 144px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 12px 15px;
+  border: 1px solid #eaeaea;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.like-also__title {
+  margin-bottom: 70px;
+  font-family: "Lato";
+  font-size: 24px;
+  font-weight: 900;
+  line-height: normal;
+  color: #4d4d4d;
+  text-transform: uppercase;
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */

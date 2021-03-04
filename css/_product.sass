@@ -1,0 +1,192 @@
+.heading-section
+    display: flex
+    justify-content: space-between
+    align-items: center
+    height: 148px
+    background-color: #f8f3f4
+    &__title
+        +fontProp(24px, 400, 20px, $accentColor)
+        text-transform: uppercase
+
+.breadcrumbs
+    display: flex
+    &__item
+        &:not(:last-of-type)::after
+            content: '/'
+            margin-left: 2px
+            margin-right: 2px
+    &__link
+        +fontProp(14px, 300, 20px, #636363)
+        text-transform: uppercase
+        &_active
+            font-weight: 700
+            color: $accentColor
+            &:visited
+                color: $accentColor
+
+.product-photo
+    width: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    background-color: #F7F7F7
+    padding-bottom: 64px
+
+    &__arrow-wrapper-right
+        justify-content: flex-end
+
+    &__arrow
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 47px
+        height: 47px
+        background-color: rgba(42, 42, 42, 0.15)
+
+.arrow-wrapper
+    width: 100%
+    display: flex
+
+.arrow
+    font-size: 22px
+    color: #fff
+    &:hover
+        cursor: pointer
+        color: $accentColor
+
+.product-info
+    display: flex
+    flex-direction: column
+    align-items: center
+    width: 640px
+    border: 1px solid #EAEAEA
+    padding: 64px 250px
+    margin: 0 auto
+    margin-top: -64px
+    margin-bottom: 119px
+    background-color: #fff
+    position: relative
+    text-align: center
+
+    &__main
+        margin-bottom: 65px
+        border-bottom: 1px solid #EAEAEA
+
+    &__heading
+        margin-top: 12px
+        margin-bottom: 58px
+        +fontProp(18px, 900, 24px, #4D4D4D)
+        text-transform: uppercase
+
+    &__product-descrition
+        margin-bottom: 32px
+        +fontProp(14px, 300, 24px, #5E5E5E)
+
+    &__price
+        margin-bottom: 65px
+        +fontProp(24px, 700, 24px, $accentColor)
+        text-transform: uppercase
+
+    &__filter
+        display: flex
+        justify-content: space-between
+        width: 537px
+
+    &__btn
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 537px
+        box-sizing: border-box
+        padding: 19px 20px
+        margin-top: 49px
+        border: 1px solid $accentColor
+        +fontProp(16px, 700, normal, $accentColor)
+        &:hover
+            cursor: pointer
+            
+
+    &__btn-icon
+        margin-right: 15px
+        path
+            fill: $accentColor
+
+.category-name
+    position: relative
+    width: fit-content
+    margin: 0 auto
+    padding-bottom: 12px
+    border-bottom: 1px solid #eaeaea
+    +fontProp(14px, 700, 24px, $accentColor)
+    text-transform: uppercase
+    &::after
+        content: ""
+        position: absolute
+        left: 42px
+        top: 35px
+        display: block
+        width: 63px
+        height: 3px
+        background-color: #ef5b70
+
+.product-characteristic
+    display: flex
+    justify-content: center
+    margin-left: 31px
+    margin-bottom: 35px
+    &__name
+        +fontProp(17px, 700, 24px, #b9b9b9)
+        text-transform: uppercase
+        &:last-of-type
+            margin-left: 44px
+    &__value
+        color: #2f2f2f
+
+.filter
+    position: relative
+    &__heading
+        +fontProp(14px, 700, 24px, #2f2f2f)
+        text-transform: uppercase
+        margin-bottom: 9px
+        text-align: left
+    &_select
+        &::after
+            content: ""
+            display: block
+            border: solid #bcbcbc
+            border-width: 0 1px 1px 0
+            display: inline-block
+            padding: 3px
+            background-color: #fff
+            pointer-events: none
+            position: absolute
+            top: 51px
+            left: 119px
+            z-index: 1
+            transform: rotate(45deg)
+        .filter__field:hover
+            cursor: pointer
+
+    &__field
+        position: relative
+        +fontProp(13px, 400, 24px, #bcbcbc)
+        width: 144px
+        box-sizing: border-box
+        padding: 12px 15px
+        border: 1px solid #eaeaea
+        -webkit-appearance: none
+        -moz-appearance: none
+        appearance: none
+
+.like-also
+    &__title
+        margin-bottom: 70px
+        +fontProp(24px, 900, normal, #4d4d4d)
+        text-transform: uppercase
+        text-align: center
+
+
+        
+        
+       
+        

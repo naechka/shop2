@@ -36,7 +36,7 @@ button
 ul
 	list-style: none
 
-input:focus
+input:focus, select:focus
 	outline: none
 
 details[open] summary
@@ -193,6 +193,7 @@ summary::-webkit-details-marker
             +fontProp(14px, 400, 28px, #4f4f4f)
 
         &__link
+            color: #4f4f4f
             &:hover
                 color: $accentColor
 
@@ -317,9 +318,15 @@ summary::-webkit-details-marker
         text-transform: uppercase
         border-bottom: 1px solid #e8e8e8
     &__link
+        display: block
         +fontProp(14px, 400, 28px , #646464)
+        &:hover
+            color: $accentColor
     &__promo
         position: relative
+    &__promo-link
+        display: block
+        line-height: 0
     &__img
         display: block
         margin-left: -18px
@@ -645,4 +652,4 @@ summary::-webkit-details-marker
     &__icon
         color: #b2b2b2
 
-            
+@import product
