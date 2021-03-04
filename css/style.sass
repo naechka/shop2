@@ -1,0 +1,655 @@
+@import 'fonts'
+
+$darkTextColor: #222
+$accentColor: #f16d7f
+$elementWidth: 261px
+$siteWidth: 1140px
+
+
+
+=fontProp($size, $weight, $lineHeight, $color, $family: 'Lato')
+	font-family: $family
+	font-size: $size
+	font-weight: $weight
+	line-height: $lineHeight
+	color: $color   
+
+
+
+*
+    margin: 0
+    padding: 0
+
+a
+	text-decoration: none
+
+a:visited
+    color: initial
+
+a:active
+    color: initial
+
+button
+    &:hover
+        cursor: pointer
+
+ul
+	list-style: none
+
+input:focus, select:focus
+	outline: none
+
+details[open] summary
+    outline: none
+
+summary 
+    display: block
+    &:focus
+        outline: none
+    &:hover
+        cursor: pointer
+
+
+summary::-webkit-details-marker 
+  display: none
+
+
+.center
+    padding: 0 calc(50% - #{$siteWidth/2})
+
+.logo
+    display: flex
+    align-items: center
+
+    &__icon
+        margin-right: 13px
+
+    &__text
+        +fontProp(27px, 300, 32px, $darkTextColor)
+        text-transform: uppercase
+
+        &_pink
+            +fontProp(27px, 900, 32px, $accentColor)
+
+.button
+    display: block
+    background-color: $accentColor
+    color: #fff
+    &:visited
+        color: #fff
+    &:hover
+        background-color: $accentColor -#111
+        cursor: pointer
+
+.dropdown
+    position: absolute
+    z-index: 10
+    border: 1px solid #e8e8e8
+    border-radius: 2px 
+    background-color: #fff
+
+.header
+    display: flex
+    justify-content: space-between
+    height: 100px
+    border-bottom: 1px solid #ececec
+
+    &-left
+        display: flex
+
+    .search
+        display: flex
+        align-items: center
+        margin-left: 37px
+
+        &__input
+            +fontProp(14px, 300, 32px, #a4a4a4)
+            width: 280px
+            box-sizing: border-box
+            padding: 6px 15px
+            border: 1px solid #e6e6e6
+            border-left: none
+
+        &__button
+            +fontProp(14px, 300, 32px, #a4a4a4)
+            padding: 6px 11px
+            border: 1px solid #e6e6e6
+            border-left: none
+            border-top-right-radius: 2px
+            border-bottom-right-radius: 2px
+            background-color: #fff
+            &:focus
+                outline: none
+
+    &-right
+        display: flex
+        align-items: center 
+
+    &__button
+        display: flex
+        align-items: center
+        margin-left: 26px
+        padding: 6px 19px
+        +fontProp(15px, 400, 32px, #fff)
+        &:visited
+            color: #fff
+        &:active
+            color: #fff
+        &::after
+            content: ' '
+            width: 0
+            height: 0
+            border-left: 5px solid transparent
+            border-right: 5px solid transparent
+            border-top: 5px solid #fff
+            margin-left: 8px
+
+    &__form
+        display: flex
+        align-items: center
+
+.browse
+    position: relative
+    &[open]
+        &::after
+            content: url('../img/arrow-top.png')
+            position: absolute
+            top: 40px
+            left: 64px
+    &__summary
+        display: flex
+        align-items: center
+        padding: 6px 9px 6px 15px 
+        border: 1px solid #e6e6e6
+        border-top-left-radius: 2px
+        border-bottom-left-radius: 2px
+        background-image: linear-gradient(to top, #f9f9f9, #f5f5f5)
+        +fontProp(14px, 300, 32px, $darkTextColor)
+        &::after
+            content: ' '
+            width: 0
+            height: 0
+            border-left: 5px solid transparent
+            border-right: 5px solid transparent
+            border-top: 5px solid #838383
+            margin-left: 8px
+
+    .browse-dropdown
+        padding: 6px 12px 18px
+        width: $elementWidth
+        border-top: none
+        box-sizing: border-box
+
+    .browse-content
+        &__heading
+            padding-left: 3px
+            border-bottom: 1px solid #e8e8e8
+            +fontProp(14px, 400, 32px, $darkTextColor)
+            text-transform: uppercase
+
+        &__category
+            padding-left: 9px
+            margin-top: 9px
+            +fontProp(14px, 400, 28px, #4f4f4f)
+
+        &__link
+            color: #4f4f4f
+            &:hover
+                color: $accentColor
+
+
+.header-cart
+    position: relative
+
+    &[open]
+        &::after
+            content: ' '
+            position: absolute
+            top: 50px
+            left: 17px
+            z-index: 20
+            border: solid #e8e8e8
+            border-width: 0 1px 1px 0
+            display: inline-block
+            padding: 3px
+            background-color: #fff
+            transform: rotate(-135deg)
+            -webkit-transform: rotate(-135deg)
+    
+        transform: none
+
+    &__icon
+        &:hover
+            path
+                fill: $accentColor
+
+    &__content
+        box-sizing: border-box
+        padding: 0 15px 15px
+        margin-top: 20px
+        width: $elementWidth
+
+    &__card
+        display: flex
+        align-items: center
+        padding-bottom: 15px
+        padding-top: 15px
+        border-bottom: 1px solid #f2f2f2
+    
+    .cart-card
+        margin-left: 15px
+        &__name
+            display: block
+            margin-top: 10px
+            margin-bottom: 10px
+            +fontProp(12px, 700, 1, $darkTextColor)
+            text-transform: uppercase
+        &__raiting  
+            width: 55px
+            height: 13px
+            margin-bottom: 13px
+            background-image: url(../img/cart-rating.jpg)
+        &__price
+            +fontProp(12px, 400, 1, $accentColor)
+
+    &__delete
+        margin-left: 52px
+        color: #c0c0c0
+        cursor: pointer
+        &:hover
+            color: #c0c0c0 - #111
+
+    &__total
+        display: flex
+        justify-content: space-between
+        margin-top: 20px
+        margin-bottom: 32px
+        +fontProp(16px, 700, 1, $darkTextColor)
+        text-transform: uppercase
+
+    &__btn
+        display: block
+        width: 100%
+        border: 1px solid #eaeaea
+        box-sizing: border-box
+        padding-top: 18px
+        padding-bottom: 18px
+        +fontProp(14px, 700, 1, #4a4a4a)
+        text-transform: uppercase
+        text-align: center
+        &:first-of-type
+            margin-bottom: 11px
+        &:hover
+            color: $accentColor
+            border-color: $accentColor
+
+.nav-menu
+    display: none
+    flex-direction: column
+    flex-wrap: wrap
+    justify-content: space-between
+    height: 310px
+    width: 846px
+    box-sizing: border-box
+    padding: 15px 22px
+    top: 42px
+    left: 405px
+    border-radius: 5px
+    &:hover
+        display: flex
+    &::before
+        content: ' '
+        position: absolute
+        top: -4px
+        left: 41px
+        z-index: 20
+        border: solid #e8e8e8
+        border-width: 0 1px 1px 0
+        display: inline-block
+        padding: 3px
+        background-color: #fff
+        transform: rotate(-135deg)
+
+    &__list
+        width: 234px
+        margin-right: 47px
+    &__heading
+        +fontProp(14px, 400, 32px, #232323)
+        text-transform: uppercase
+        border-bottom: 1px solid #e8e8e8
+    &__link
+        display: block
+        +fontProp(14px, 400, 28px , #646464)
+        &:hover
+            color: $accentColor
+    &__promo
+        position: relative
+    &__promo-link
+        display: block
+        line-height: 0
+    &__img
+        display: block
+        margin-left: -18px
+    &__promo-text
+        position: absolute
+        top: 53px
+        left: 158px
+        width: 75px
+        +fontProp(22px, 900, 28px, #fff)
+        text-transform: uppercase
+            
+.main-nav
+    position: relative
+    &__list
+        display: flex
+        justify-content: center
+        align-items: center
+        height: 51px
+        &:hover
+            ~ .nav-menu
+                display: flex
+
+    &__item
+        &:not(:last-of-type)
+            margin-right: 45px
+
+    &__link
+        +fontProp(14px, 700, 26px, $darkTextColor)
+        text-transform: uppercase
+
+.brand
+    background-color: #e8e8e8
+    
+    &__wrapper
+        display: flex
+        height: 613px
+        background: #e8e8e8 url(../img/brand-bg.jpg) no-repeat 110px bottom
+
+    &__heading
+        width: 497px
+        height: fit-content
+        margin-top: 220px
+        border-left: 12px solid $accentColor
+        padding-left: 12px
+        +fontProp(60px, 900, normal, $darkTextColor)
+        text-transform: uppercase
+
+        &_small
+            display: block
+            font-size: 40px
+
+        &_pink
+            color: $accentColor
+
+.sale
+    display: flex
+    margin-top: 98px
+    .sale-left
+        margin-right: 20px
+
+    &__container
+        position: relative
+        background-color: #dadad2
+        &:not(:last-of-type)
+            margin-bottom: 20px
+        &_big
+            height: 542px
+        &_small
+            height: 261px
+
+    &__link
+        display: block
+        line-height: 0
+
+    &__img
+        height: 100%
+
+    &__text
+        position: absolute
+        top: 26px
+        left: 0
+        padding: 16px 20px
+        +fontProp(18px, 900, normal, $darkTextColor)
+        text-transform: uppercase 
+        background-color: #fff
+        &_big 
+            display: block
+            font-size: 30px
+            color: $accentColor
+
+.features
+    margin-top: 100px
+    &__heading
+        +fontProp(30px, 700, 54px, $darkTextColor)
+        text-transform: capitalize
+        text-align: center
+    &__text
+        +fontProp(14px, 400, 54px, #9f9f9f)
+        text-align: center
+    &__list
+        display: flex
+        flex-wrap: wrap
+        margin-top: 50px
+    &__button
+        width: 212px
+        box-sizing: border-box
+        padding: 18px 7px 18px 24px
+        margin: 0 auto
+        font-size: 16px
+        font-weight: 700
+        text-transform: capitalize
+        .fa-long-arrow-right
+            display: inline-block
+            margin-left: 9px
+
+.product-card
+    position: relative
+    width: $elementWidth
+    margin-bottom: 60px
+    &:not(:nth-of-type(4n))
+        margin-right: 32px
+    &__add-to-cart
+        display: none
+        position: absolute
+        top: 97px
+        left: 70px
+        width: 123px
+        padding: 15px 12px 15px 41px
+        border: 1px solid #fff
+        box-sizing: border-box
+        +fontProp(13px, 700, normal, #fff)
+        background: url(../img/add-to-cart.svg) no-repeat 12px center
+        cursor: pointer
+    &:hover
+        box-shadow: 0px 5px 8px 0 rgba(0, 0, 0, 0.16)
+        .product-card__link
+            filter: brightness(30%)
+        .product-card__add-to-cart
+            display: block
+    &__link
+        display: block
+        line-height: 0
+    &__img
+        height: 100%
+    &__name
+        display: block
+        margin-top: 20px
+        margin-bottom: 17px
+        padding: 0 15px
+        +fontProp(13px, 400, normal, $darkTextColor)
+        text-transform: uppercase
+    &__price
+        padding: 0 15px 20px
+        +fontProp(16px, 700, normal, $accentColor)
+    
+.advantages
+    display: flex
+    margin-top: 113px
+    margin-bottom: 97px
+    &__left
+        position: relative
+    &__img
+        display: block
+    &__sale-text
+        position: absolute
+        top: 146px
+        left: 49px
+        width: 293px
+        +fontProp(53px, 700, 0.8, #fff)
+        text-transform: uppercase
+        &_pink
+            color: $accentColor
+        &_small
+            font-size: 32px
+    &__right
+        padding: 47px 36px 54px 0
+        background-color: #222
+
+.advantage-card
+    padding-left: 111px
+    &:not(:last-of-type)
+        margin-bottom: 50px
+    &__heading
+        margin-bottom: 14px
+        +fontProp(20px, 700, normal, #fff)
+        text-transform: capitalize
+    &__text
+        +fontProp(14px, 300, 24px, #fff)
+        text-align: justify
+    &_delivery
+        background:#222 url(../img/delivery-icon.svg) no-repeat 36px top
+    &_sale
+        background:#222 url(../img/sale-icon.svg) no-repeat 36px top
+    &_qa
+        background:#222 url(../img/qa-icon.svg) no-repeat 36px top
+
+.subscribe
+    display: flex
+    height: 438px
+    margin-bottom: 109px
+    background: #f2f2f2 url(../img/subscribe-bg.png) no-repeat center 18px
+    background-size: cover
+    &__left
+        width: 50%
+        border-right: 1px solid #e3e3e3
+    &__right
+        width: 50%
+
+.review
+    &__img
+        object-fit: contain
+        object-position: top
+    &__container
+        display: flex
+        padding-top: 111px
+    &__content
+        width: 386px
+        margin-left: 28px
+        margin-top: 5px
+    &__text
+        margin-bottom: 10px
+        +fontProp(16px, 400, 26px, $darkTextColor)
+        font-style: italic
+    &__name
+        +fontProp(16px, 700, 26px, $accentColor)
+        &_pink
+            display: block
+            +fontProp(12px, 300, 14px, $darkTextColor)
+        
+.subscribe-form
+    display: flex
+    flex-direction: column
+    justify-content: center
+    &__heading
+        +fontProp(24px, 400, 37px, $darkTextColor)
+        text-transform: uppercase
+        text-align: center
+    &__content
+        +fontProp(14px, 400, 24px, $darkTextColor)
+        text-transform: uppercase
+        text-align: center
+    &__form
+        margin: 0 auto
+        margin-top: 30px
+    &__input
+        width: 282px
+        padding: 13px 28px
+        box-sizing: border-box
+        border-color: transparent
+        border-top-left-radius: 21px
+        border-bottom-left-radius: 21px
+        background-color: #e1e1e1
+        +fontProp(14px, 400, 1, $darkTextColor)
+        opacity: 0.67
+        text-transform: capitalize
+    &__button
+        width: 104px
+        padding: 13px 20px
+        box-sizing: border-box
+        margin-left: -5px
+        border-color: transparent
+        background-color: $accentColor
+        border-top-right-radius: 21px
+        border-bottom-right-radius: 21px
+        color: #fff
+        &:hover
+            cursor: pointer
+            background-color: $accentColor - #111
+
+.footer-nav
+    display: flex
+    &__info
+        width: 427px
+    &__text
+        +fontProp(14px, 300, 24px, #898989)
+        &:first-of-type
+            margin-top: 20px
+            margin-bottom: 24px
+    &__nav
+        display: flex
+        margin-left: 64px
+        padding-top: 5px
+        padding-bottom: 89px
+    &__list
+        width: calc(#{($siteWidth - 427px - 64px)/3})
+    &__item
+        &:not(:last-of-type)
+            margin-bottom: 22px
+    &__link
+        +fontProp(16px, 400, 1, #898989)
+    &__header
+        margin-bottom: 46px
+        +fontProp(18px, 700, 26px, $accentColor)
+        text-transform: uppercase
+
+.copyright
+    display: flex
+    justify-content: space-between
+    padding-top: 24px
+    padding-bottom: 24px
+    background: #e6e6e6
+    &__text
+        +fontProp(16px, 400, 32px, #7a7a7a)
+
+.social
+    display: flex
+    align-items: center
+    &__item
+        &:not(:last-of-type)
+            margin-right: 8px
+    &__link
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 32px
+        height: 32px
+        background-color: #fff
+        font-size: 16px
+        &:hover
+            background-color: $accentColor
+            .social__icon
+                color: #f7f7f8
+    &__icon
+        color: #b2b2b2
+
+@import product
