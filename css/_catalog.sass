@@ -1,0 +1,77 @@
+$asideWidth: 243px
+$asideRightMargin: 50px
+    
+.main-content
+    display: flex
+    margin-top: 59px
+
+.left-filter
+    margin-right: $asideRightMargin
+    &__filter
+        width: $asideWidth
+        &:not(:last-of-type)
+            margin-bottom: 18px
+        &[open]
+            .left-filter__category
+                color: $accentColor
+            .left-filter__category-caret
+                color: $accentColor
+                transform: rotate(180deg)
+    &__category
+        display: flex
+        align-items: center
+        justify-content: space-between
+        padding: 10px 5px 10px 11px
+        border-bottom: 1px solid #ebebeb
+        border-left: 5px solid $accentColor
+        +fontProp(14px, 700, normal, #6f6e6e)
+        text-transform: uppercase
+        transition-property: color 
+        transition-duration: 0.2s
+        &:hover
+            color: $accentColor
+            .left-filter__category-caret
+                color: $accentColor
+    &__category-caret
+        display: block
+        color: #6f6e6e
+        transition-property: color, transform
+        transition-duration: 0.2s
+    &__list
+        padding-left: 16px
+        margin-top: 16px
+
+.center-filters
+    display: flex
+    &__filter
+        width: ($siteWidth - $asideWidth -$asideRightMargin)/3
+    &__heading
+        margin-bottom: 20px
+        +fontProp(14px, 700, normal, #6f6e6e)
+        text-transform: uppercase
+    &__trends
+        display: flex
+    &__trends-item
+        +fontProp(14px, 400, 26px, #6f6e6e)
+        &:not(:last-of-type)
+            &::after
+                content: "|"
+                display: inline-block
+                margin: 0 14px
+                color: #6f6e6e
+
+    &__size
+        display: flex
+        flex-wrap: wrap
+    &__group
+        width: 46px
+        margin-right: 23px
+    &__checkbox
+        position: absolute
+        z-index: -1
+        opacity: 0
+    &__label
+        margin-left: 7px
+        +fontProp(14px, 400, normal, #6f6e6e)
+        text-transform: uppercase
+

@@ -88,6 +88,12 @@ summary::-webkit-details-marker
     border-radius: 2px 
     background-color: #fff
 
+.category-link
+    display: block
+    +fontProp(14px, 400, 28px , #646464)
+    &:hover
+        color: $accentColor
+
 .header
     display: flex
     justify-content: space-between
@@ -317,11 +323,6 @@ summary::-webkit-details-marker
         +fontProp(14px, 400, 32px, #232323)
         text-transform: uppercase
         border-bottom: 1px solid #e8e8e8
-    &__link
-        display: block
-        +fontProp(14px, 400, 28px , #646464)
-        &:hover
-            color: $accentColor
     &__promo
         position: relative
     &__promo-link
@@ -653,3 +654,4 @@ summary::-webkit-details-marker
         color: #b2b2b2
 
 @import product
+@import catalog
