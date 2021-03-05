@@ -1604,8 +1604,9 @@ summary::-webkit-details-marker {
 }
 
 .center-filters__group {
-  width: 46px;
+  width: 47px;
   margin-right: 23px;
+  margin-bottom: 13px;
 }
 
 .center-filters__checkbox {
@@ -1615,12 +1616,221 @@ summary::-webkit-details-marker {
 }
 
 .center-filters__label {
-  margin-left: 7px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-family: "Lato";
   font-size: 14px;
   font-weight: 400;
   line-height: normal;
   color: #6f6e6e;
   text-transform: uppercase;
+}
+
+.center-filters__label:hover {
+  cursor: pointer;
+}
+
+.center-filters__checkbox + label::before {
+  content: "";
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 13px;
+  height: 13px;
+  border: 1px solid #ebebeb;
+  margin-right: 8px;
+  background-image: url("../img/checked.svg");
+}
+
+.center-filters__checkbox + label:hover::before {
+  content: '';
+  border-color: #f16d7f;
+}
+
+.center-filters__checkbox:checked + label::before {
+  content: '';
+  border-color: #f16d7f;
+  background-position: 241px 241px;
+  background-size: 94px;
+}
+
+.product-card {
+  margin-right: 29px;
+}
+
+.product-card:nth-of-type(4n) {
+  margin-right: 29px;
+}
+
+.product-card:nth-of-type(3n) {
+  margin-right: 0;
+}
+
+.product-list__sorting {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px;
+  background-color: #f3f3f3;
+}
+
+.sort-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.sort-block:not(:last-of-type) {
+  margin-right: 10px;
+}
+
+.sort-block__name {
+  display: block;
+  border: 1px solid #ebebeb;
+  border-right: none;
+  padding: 9px 9px 9px 11px;
+  background-color: #fff;
+  font-family: "Lato";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+  color: #6f6e6e;
+}
+
+.sort-block::after {
+  content: '';
+  position: absolute;
+  top: 16px;
+  right: 15px;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #6f6e6e;
+  cursor: pointer;
+}
+
+.sort-block__select {
+  padding: 9px 35px 9px 11px;
+  border: 1px solid #ebebeb;
+  font-family: "Lato";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+  color: #6f6e6e;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.sort-block__select:hover {
+  cursor: pointer;
+}
+
+.pages__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 15px;
+  border: 1px solid #ebebeb;
+}
+
+.pages__number {
+  margin-right: 16px;
+}
+
+.pages__number:nth-of-type(7) {
+  margin-right: 0;
+}
+
+.pages__number_etc {
+  margin-right: 0;
+}
+
+.pages__number:last-of-type {
+  margin-right: 0;
+}
+
+.pages__link {
+  font-family: "Lato";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: normal;
+  color: #aaaaaa;
+}
+
+.pages__link:visited {
+  color: #aaa;
+}
+
+.pages__link:hover {
+  color: #f16d7f;
+}
+
+.pages__link_active {
+  color: #f16d7f;
+}
+
+.pages__link_active:visited {
+  color: #f16d7f;
+}
+
+.advantages-catalog {
+  margin-top: 108px;
+  background-color: #222;
+}
+
+.advantages-catalog__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 103px 0;
+  text-align: center;
+}
+
+.advantages-catalog__item {
+  padding: 60px 25px 0;
+  width: 360px;
+}
+
+.advantages-catalog__item:not(:last-of-type) {
+  margin-right: 30px;
+}
+
+.advantages-catalog__item-delivery {
+  background: #222 url(../img/delivery-icon.svg) no-repeat top center;
+}
+
+.advantages-catalog__item-sales {
+  background: #222 url(../img/sale-icon.svg) no-repeat top center;
+}
+
+.advantages-catalog__item-qa {
+  background: #222 url(../img/qa-icon.svg) no-repeat top center;
+}
+
+.advantages-catalog__item-heading {
+  margin-bottom: 16px;
+  font-family: "Lato";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #fbfbfb;
+}
+
+.advantages-catalog__item-description {
+  font-family: "Lato";
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 17px;
+  color: #fbfbfb;
 }
 /*# sourceMappingURL=style.css.map */

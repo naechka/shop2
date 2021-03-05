@@ -64,14 +64,144 @@ $asideRightMargin: 50px
         display: flex
         flex-wrap: wrap
     &__group
-        width: 46px
+        width: 47px
         margin-right: 23px
+        margin-bottom: 13px
     &__checkbox
         position: absolute
         z-index: -1
         opacity: 0
     &__label
-        margin-left: 7px
+        display: flex
+        align-items: center
         +fontProp(14px, 400, normal, #6f6e6e)
         text-transform: uppercase
+        &:hover
+            cursor: pointer
 
+.center-filters__checkbox+label::before
+    content: ""
+    display: inline-block
+    box-sizing: border-box
+    width: 13px
+    height: 13px
+    border: 1px solid #ebebeb
+    margin-right: 8px
+    background-image: url('../img/checked.svg')
+
+.center-filters__checkbox+label:hover::before
+    content: ''
+    border-color: $accentColor
+
+.center-filters__checkbox:checked+label::before
+    content: ''
+    border-color: $accentColor
+    background-position: 241px 241px
+    background-size: 94px
+
+.product-card
+    margin-right: 29px
+    &:nth-of-type(4n) 
+        margin-right: 29px
+    &:nth-of-type(3n)
+        margin-right: 0
+        
+.product-list
+    &__sorting
+        display: flex
+        padding: 10px
+        background-color: #f3f3f3
+
+.sort-block
+    display: flex
+    position: relative
+    &:not(:last-of-type)
+        margin-right: 10px
+    &__name
+        display: block
+        border: 1px solid #ebebeb
+        border-right: none
+        padding: 9px 9px 9px 11px
+        background-color: #fff
+        +fontProp(14px, 400, normal, #6f6e6e)
+    &::after
+        content: ''
+        position: absolute
+        top: 16px
+        right: 15px
+        width: 0
+        height: 0
+        border-left: 5px solid transparent
+        border-right: 5px solid transparent
+        border-top: 5px solid #6f6e6e
+        cursor: pointer
+    &__select
+        padding: 9px 35px 9px 11px
+        border: 1px solid #ebebeb
+        +fontProp(14px, 400, normal, #6f6e6e)
+        -webkit-appearance: none
+        -moz-appearance: none
+        appearance: none
+        &:hover
+            cursor: pointer
+
+.pages
+    &__list
+        display: flex
+        width: fit-content
+        padding: 15px
+        border: 1px solid #ebebeb
+    &__number
+        margin-right: 16px
+        &:nth-of-type(7)
+            margin-right: 0
+        &_etc
+            margin-right: 0
+        &:last-of-type
+            margin-right: 0
+            
+    &__link
+        +fontProp(16px, 700, normal,  #aaaaaa)
+        &:visited
+            color: #aaa
+        &:hover
+            color: $accentColor
+        &_active
+            color: $accentColor
+            &:visited
+                color: $accentColor
+
+.advantages-catalog
+    margin-top: 108px
+    background-color: #222
+
+.advantages-catalog
+	&__list
+		display: flex
+		padding: 103px 0
+		text-align: center
+
+	&__item
+		padding: 60px 25px 0
+		width: 360px
+
+		&:not(:last-of-type)
+			margin-right: 30px 
+
+	&__item-delivery
+		background: $darkTextColor url(../img/delivery-icon.svg) no-repeat top center
+	
+	&__item-sales
+		background: $darkTextColor url(../img/sale-icon.svg) no-repeat top center
+
+	&__item-qa
+		background: $darkTextColor url(../img/qa-icon.svg) no-repeat top center
+
+	&__item-heading
+		margin-bottom: 16px
+		+fontProp(20px, 400, 24px, #fbfbfb)	
+
+	&__item-description
+		+fontProp(14px, 300, 17px, #fbfbfb)	
+
+        
